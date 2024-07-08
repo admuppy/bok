@@ -1,0 +1,62 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  creationTimestamp: "2024-07-04T06:44:07Z"
+  name: fields
+spec:
+  description: |
+    kubectl-fields parses specified kubectl resources to match given pattern(s).
+    It prints parental hierarchy of matched fields in one-liner format.
+
+    More on https://github.com/rewanthtammana/kubectl-fields
+
+    Examples:
+
+    Find resource field hierarchy:
+    $ kubectl fields svc affinity
+    spec.sessionAffinity
+    spec.sessionAffinityConfig
+
+    Find resource field hierarchy (case sensitive match):
+    $ kubectl fields po.spec.volumes -I Ver
+    downwardAPI.items.fieldRef.apiVersion
+    projected.sources.downwardAPI.items.fieldRef.apiVersion
+  homepage: https://github.com/rewanthtammana/kubectl-fields
+  platforms:
+  - bin: kubectl-fields
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: darwin
+    sha256: 2b07be546f1b5f69f718b99d8c874336895850021fb905175e304ba15f71ccb4
+    uri: https://github.com/rewanthtammana/kubectl-fields/releases/download/v1.2.3/kubectl-fields-Darwin-x86_64.tar.gz
+  - bin: kubectl-fields
+    files: null
+    selector:
+      matchLabels:
+        arch: arm64
+        os: darwin
+    sha256: 2b54a55770546dc7aa791cdb466c5f55203069bb5929733e0f9423a429acc589
+    uri: https://github.com/rewanthtammana/kubectl-fields/releases/download/v1.2.3/kubectl-fields-Darwin-arm64.tar.gz
+  - bin: kubectl-fields
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: linux
+    sha256: 5b4d0b63556929eb101cd7006898214ab9681dca94da5f40757a3556259adcc7
+    uri: https://github.com/rewanthtammana/kubectl-fields/releases/download/v1.2.3/kubectl-fields-Linux-x86_64.tar.gz
+  - bin: kubectl-fields.exe
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: windows
+    sha256: eced38433f2127c83e169585f387f5b43eee95eba75b8de37efa3ed1261a814e
+    uri: https://github.com/rewanthtammana/kubectl-fields/releases/download/v1.2.3/kubectl-fields-Windows-x86_64.zip
+  shortDescription: Grep resources hierarchy by field name
+  version: v1.2.3
+status:
+  source:
+    name: default

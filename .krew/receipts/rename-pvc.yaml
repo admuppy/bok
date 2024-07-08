@@ -1,0 +1,58 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  creationTimestamp: "2024-07-04T01:38:17Z"
+  name: rename-pvc
+spec:
+  caveats: Be sure to create a backup of your data in the PVC before using rename-pvc!
+  description: |
+    rename-pvc renames an existing PersistentVolumeClaim (PVC) by creating a new PVC
+    with the same spec and rebinding the existing PersistentClaim (PV) to the newly created PVC.
+    Afterwards the old PVC is automatically deleted.
+  homepage: https://github.com/stackitcloud/rename-pvc
+  platforms:
+  - bin: rename-pvc
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: linux
+    sha256: 485727b6e254732f287a0f78d4f9767d405c3dba1d4c2db847ef2abab585e658
+    uri: https://github.com/stackitcloud/rename-pvc/releases/download/v0.5.0/rename-pvc-linux-amd64.tar.gz
+  - bin: rename-pvc
+    files: null
+    selector:
+      matchLabels:
+        arch: arm64
+        os: linux
+    sha256: 0b31d14f1aeec70f26eca95f805388bc755c93ec8d41aeae94dbc068a41b626c
+    uri: https://github.com/stackitcloud/rename-pvc/releases/download/v0.5.0/rename-pvc-linux-arm64.tar.gz
+  - bin: rename-pvc
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: darwin
+    sha256: 9095e6e316b298adb3ed96de8a6b921cfda0803e31ddab172f4099155284354d
+    uri: https://github.com/stackitcloud/rename-pvc/releases/download/v0.5.0/rename-pvc-darwin-amd64.tar.gz
+  - bin: rename-pvc
+    files: null
+    selector:
+      matchLabels:
+        arch: arm64
+        os: darwin
+    sha256: c244b40a859a1eea4a9700f49d70185191fec25071e80fc9a3a48406fa991d20
+    uri: https://github.com/stackitcloud/rename-pvc/releases/download/v0.5.0/rename-pvc-darwin-arm64.tar.gz
+  - bin: rename-pvc.exe
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: windows
+    sha256: e9908df05d55398964182ad4ce510cb83995368d2ea57f6ef06d05dbb3385655
+    uri: https://github.com/stackitcloud/rename-pvc/releases/download/v0.5.0/rename-pvc-windows-amd64.zip
+  shortDescription: Rename a PersistentVolumeClaim (PVC)
+  version: v0.5.0
+status:
+  source:
+    name: default

@@ -1,0 +1,56 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  creationTimestamp: "2024-07-04T06:44:15Z"
+  name: explore
+spec:
+  description: |
+    Fuzzy-find and explain the fields associated with
+    supported API resource.
+  homepage: https://github.com/keisku/kubectl-explore
+  platforms:
+  - bin: kubectl-explore
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: darwin
+    sha256: c9c0f532cc2a86befffdf1679d8eb237de50beb23db8b41d3b1a5c298abfd96f
+    uri: https://github.com/keisku/kubectl-explore/releases/download/v0.9.3/kubectl-explore_v0.9.3_darwin_amd64.tar.gz
+  - bin: kubectl-explore
+    files: null
+    selector:
+      matchLabels:
+        arch: arm64
+        os: darwin
+    sha256: 81343d578c0bd6ce25d08364a376668ba99cec440a0914ba3c193b4eb0e6bab4
+    uri: https://github.com/keisku/kubectl-explore/releases/download/v0.9.3/kubectl-explore_v0.9.3_darwin_arm64.tar.gz
+  - bin: kubectl-explore
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: linux
+    sha256: d9ab8753e1ad9dce1c19656649c5444f6eb37c64e32da23e045c562580906cbe
+    uri: https://github.com/keisku/kubectl-explore/releases/download/v0.9.3/kubectl-explore_v0.9.3_linux_amd64.tar.gz
+  - bin: kubectl-explore
+    files: null
+    selector:
+      matchLabels:
+        arch: arm64
+        os: linux
+    sha256: 70c7c5e4b8205a9d39f711c37cd9e7529c194849b6615e394fb17584be4a7afb
+    uri: https://github.com/keisku/kubectl-explore/releases/download/v0.9.3/kubectl-explore_v0.9.3_linux_arm64.tar.gz
+  - bin: kubectl-explore.exe
+    files: null
+    selector:
+      matchLabels:
+        arch: amd64
+        os: windows
+    sha256: 01ccf9a686e8a7901e0227aa121d7cfebe65961c687055b7b070b58410001c72
+    uri: https://github.com/keisku/kubectl-explore/releases/download/v0.9.3/kubectl-explore_v0.9.3_windows_amd64.tar.gz
+  shortDescription: A better kubectl explain with the fuzzy finder
+  version: v0.9.3
+status:
+  source:
+    name: default
